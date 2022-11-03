@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Sales_Team_Wordpress_Site
+ * @package Sales_Team
  */
 
 get_header();

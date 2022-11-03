@@ -6,23 +6,23 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Sales_Team_Wordpress_Site
+ * @package Sales_Team
  */
 
 ?>
 
 	<footer id="colophon" class="site-footer">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'bitwise-sales-team' ) ); ?>">
+			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'sales-team' ) ); ?>">
 				<?php
 				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'bitwise-sales-team' ), 'WordPress' );
+				printf( esc_html__( 'Proudly powered by %s', 'sales-team' ), 'WordPress' );
 				?>
 			</a>
 			<span class="sep"> | </span>
 				<?php
 				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'bitwise-sales-team' ), 'bitwise-sales-team', '<a href="http://underscores.me/">Wordpress Team</a>' );
+				printf( esc_html__( 'Theme: %1$s by %2$s.', 'sales-team' ), 'sales-team', '<a href="http://underscores.me/">Underscores.me</a>' );
 				?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->

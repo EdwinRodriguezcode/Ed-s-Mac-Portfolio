@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Sales_Team_Wordpress_Site
+ * @package Sales_Team
  */
 
 if ( ! is_active_sidebar( 'sidebar-1' ) ) {

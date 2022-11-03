@@ -1,8 +1,8 @@
 <?php
 /**
- * Sales Team Wordpress Site Theme Customizer
+ * Sales Team Theme Customizer
  *
- * @package Sales_Team_Wordpress_Site
+ * @package Sales_Team
  */
 
 /**
@@ -10,7 +10,7 @@
  *
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
-function bitwise_sales_team_customize_register( $wp_customize ) {
+function sales_team_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
@@ -20,26 +20,26 @@ function bitwise_sales_team_customize_register( $wp_customize ) {
 			'blogname',
 			array(
 				'selector'        => '.site-title a',
-				'render_callback' => 'bitwise_sales_team_customize_partial_blogname',
+				'render_callback' => 'sales_team_customize_partial_blogname',
 			)
 		);
 		$wp_customize->selective_refresh->add_partial(
 			'blogdescription',
 			array(
 				'selector'        => '.site-description',
-				'render_callback' => 'bitwise_sales_team_customize_partial_blogdescription',
+				'render_callback' => 'sales_team_customize_partial_blogdescription',
 			)
 		);
 	}
 }
-add_action( 'customize_register', 'bitwise_sales_team_customize_register' );
+add_action( 'customize_register', 'sales_team_customize_register' );
 
 /**
  * Render the site title for the selective refresh partial.
  *
  * @return void
  */
-function bitwise_sales_team_customize_partial_blogname() {
+function sales_team_customize_partial_blogname() {
 	bloginfo( 'name' );
 }
 
@@ -48,14 +48,14 @@ function bitwise_sales_team_customize_partial_blogname() {
  *
  * @return void
  */
-function bitwise_sales_team_customize_partial_blogdescription() {
+function sales_team_customize_partial_blogdescription() {
 	bloginfo( 'description' );
 }
 
 /**
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
-function bitwise_sales_team_customize_preview_js() {
-	wp_enqueue_script( 'bitwise-sales-team-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), _S_VERSION, true );
+function sales_team_customize_preview_js() {
+	wp_enqueue_script( 'sales-team-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), _S_VERSION, true );
 }
-add_action( 'customize_preview_init', 'bitwise_sales_team_customize_preview_js' );
+add_action( 'customize_preview_init', 'sales_team_customize_preview_js' );

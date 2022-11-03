@@ -8,39 +8,39 @@
  *
  * @link https://developer.wordpress.org/themes/functionality/custom-headers/
  *
- * @package Sales_Team_Wordpress_Site
+ * @package Sales_Team
  */
 
 /**
  * Set up the WordPress core custom header feature.
  *
- * @uses bitwise_sales_team_header_style()
+ * @uses sales_team_header_style()
  */
-function bitwise_sales_team_custom_header_setup() {
+function sales_team_custom_header_setup() {
 	add_theme_support(
 		'custom-header',
 		apply_filters(
-			'bitwise_sales_team_custom_header_args',
+			'sales_team_custom_header_args',
 			array(
 				'default-image'      => '',
 				'default-text-color' => '000000',
 				'width'              => 1000,
 				'height'             => 250,
 				'flex-height'        => true,
-				'wp-head-callback'   => 'bitwise_sales_team_header_style',
+				'wp-head-callback'   => 'sales_team_header_style',
 			)
 		)
 	);
 }
-add_action( 'after_setup_theme', 'bitwise_sales_team_custom_header_setup' );
+add_action( 'after_setup_theme', 'sales_team_custom_header_setup' );
 
-if ( ! function_exists( 'bitwise_sales_team_header_style' ) ) :
+if ( ! function_exists( 'sales_team_header_style' ) ) :
 	/**
 	 * Styles the header image and text displayed on the blog.
 	 *
-	 * @see bitwise_sales_team_custom_header_setup().
+	 * @see sales_team_custom_header_setup().
 	 */
-	function bitwise_sales_team_header_style() {
+	function sales_team_header_style() {
 		$header_text_color = get_header_textcolor();
 
 		/*

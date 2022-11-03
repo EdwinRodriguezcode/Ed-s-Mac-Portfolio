@@ -4,7 +4,7 @@
  *
  * @link https://jetpack.com/
  *
- * @package Sales_Team_Wordpress_Site
+ * @package Sales_Team
  */
 
 /**
@@ -14,13 +14,13 @@
  * See: https://jetpack.com/support/responsive-videos/
  * See: https://jetpack.com/support/content-options/
  */
-function bitwise_sales_team_jetpack_setup() {
+function sales_team_jetpack_setup() {
 	// Add theme support for Infinite Scroll.
 	add_theme_support(
 		'infinite-scroll',
 		array(
 			'container' => 'main',
-			'render'    => 'bitwise_sales_team_infinite_scroll_render',
+			'render'    => 'sales_team_infinite_scroll_render',
 			'footer'    => 'page',
 		)
 	);
@@ -33,7 +33,7 @@ function bitwise_sales_team_jetpack_setup() {
 		'jetpack-content-options',
 		array(
 			'post-details' => array(
-				'stylesheet' => 'bitwise-sales-team-style',
+				'stylesheet' => 'sales-team-style',
 				'date'       => '.posted-on',
 				'categories' => '.cat-links',
 				'tags'       => '.tags-links',
@@ -48,13 +48,13 @@ function bitwise_sales_team_jetpack_setup() {
 		)
 	);
 }
-add_action( 'after_setup_theme', 'bitwise_sales_team_jetpack_setup' );
+add_action( 'after_setup_theme', 'sales_team_jetpack_setup' );
 
-if ( ! function_exists( 'bitwise_sales_team_infinite_scroll_render' ) ) :
+if ( ! function_exists( 'sales_team_infinite_scroll_render' ) ) :
 	/**
 	 * Custom render function for Infinite Scroll.
 	 */
-	function bitwise_sales_team_infinite_scroll_render() {
+	function sales_team_infinite_scroll_render() {
 		while ( have_posts() ) {
 			the_post();
 			if ( is_search() ) :
