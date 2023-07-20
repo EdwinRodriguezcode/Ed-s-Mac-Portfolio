@@ -1,0 +1,22 @@
+{
+  "name": "edspage",
+  "version": "1.0.0",
+  "description": "my portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EdwinRodriguezcode/blockportfol.git"
+  },
+  "keywords": [
+    "portfolio"
+  ],
+  "author": "ed",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EdwinRodriguezcode/blockportfol/issues"
+  },
+  "homepage": "https://github.com/EdwinRodriguezcode/blockportfol#readme"
+}
